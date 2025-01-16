@@ -3,7 +3,7 @@ import PirschAnalytics from "./pirschAnalytics";
 import PostPage from "@/components/postPage/PostPage";
 import { Metadata } from "next";
 import { headers } from "next/headers";
-import logger from "@/lib/logger";
+// import logger from "@/lib/logger";
 
 
 interface Params {
@@ -11,7 +11,7 @@ interface Params {
 }
 
 export const generateMetadata = async () => {
-    logger.info('Post Page');
+    // logger.info('Post Page');
     const title = (await headers())?.get('x-title');
     const favicon = (await headers())?.get('x-favicon');
     const dataJson = (await headers())?.get('x-post') as string;

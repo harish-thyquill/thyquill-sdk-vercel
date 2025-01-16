@@ -3,7 +3,7 @@ import LandingPage from '../components/LandingPage/LandingPage';
 import { headers } from 'next/headers';
 import { Toaster } from 'react-hot-toast';
 import Custom404Page from '@/components/404/404';
-import logger from '@/lib/logger';
+// import logger from '@/lib/logger';
 
 export const generateMetadata = async () => {
   const title = (await headers())?.get('x-title');
@@ -17,7 +17,7 @@ export const generateMetadata = async () => {
 };
 
 const LandingHomePage = async () => {
-  logger.info('Landing Page');
+  // logger.info('Landing Page');
   const domain = (await headers())?.get('host') || '';
   console.log(domain, '----domain');
   // const domain = 'www.saasinsider.com'
