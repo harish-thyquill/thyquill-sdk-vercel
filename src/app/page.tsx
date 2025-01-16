@@ -19,6 +19,7 @@ export const generateMetadata = async () => {
 const LandingHomePage = async () => {
   logger.info('Landing Page');
   const domain = (await headers())?.get('host') || '';
+  console.log(domain, '----domain');
   // const domain = 'www.saasinsider.com'
   const res = await verifyDomain(domain || '');
   if (res) {

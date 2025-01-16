@@ -37,6 +37,7 @@ export const verifyDomain = async (domain: string) => {
     const query = convertJSONToGETParams({
         domain,
     })
+    console.log(process.env.API_URL, '----API_URL');
     const URL = process.env.API_URL + '/api/landing/domain/verify-domain?' + query;
     return await triggerApi({
         URL,

@@ -3,6 +3,8 @@ import { getPostByUrl, verifyDomain } from './scripts/api/landing';
 
 export async function middleware(request: NextRequest) {
     const host = request.headers.get('host');
+    console.log(host, '----host');
+
     const pathname = request.nextUrl.pathname;
 
     if (pathname === '/404') {
@@ -10,21 +12,20 @@ export async function middleware(request: NextRequest) {
     }
 
     if (host) {
-        const orgName = request.headers.get('host');
         const orgCheck = async () => {
             try {
-                if (orgName) {
-                    const res = await verifyDomain(orgName);
+                if (host) {
+                    const res = await verifyDomain(host);
                     return res;
                 }
-                return !!orgName;
+                return !!host;
             } catch (error: any) {
                 console.error(error.message);
                 return false;
             }
         };
 
-        if (orgName && (await orgCheck())) {
+        if (host && (await orgCheck())) {
             const org = await orgCheck();
             if (org) {
                 if (pathname.split('/')[1]) {
