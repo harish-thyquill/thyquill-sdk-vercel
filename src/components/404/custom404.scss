@@ -1,0 +1,67 @@
+.custom_404_container {
+    .custom_404 {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        margin: var(--spacing-ml);
+        transform: translate(-10%, -50%);
+
+        .custom_404_number {
+            color: var(--colors-primary);
+            font-size: var(--font-size-text-md);
+            font-style: normal;
+            font-weight: 600;
+            line-height: var(--line-height-text-md);
+        }
+
+        .custom_404_title {
+            color: var(--colors-text-primary-900);
+            font-size: var(--font-size-display-xl);
+            font-style: normal;
+            font-weight: 600;
+            line-height: var(--line-height-display-xl);
+            letter-spacing: -1.2px;
+        }
+
+        .custom_404_description {
+            color: var(--colors-text-tertiary-600);
+            font-size: var(--font-size-text-xl);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--line-height-text-xl);
+            margin-top: var(--spacing-3xl);
+        }
+
+        .custom_404_actions {
+            margin-top: var(--spacing-6xl);
+
+            .custom_404_back_btn {
+                width: 100%;
+                padding: var(--spacing-xl) var(--spacing-3lg);
+                border-radius: var(--radius-lg);
+                border: 1px solid var(--colors-border-primary);
+                background: var(--colors-primary-text);
+                color: var(--colors-text-secondary-700);
+                font-size: var(--font-size-text-lg);
+                font-style: normal;
+                font-weight: 600;
+                line-height: var(--line-height-text-lg);
+                text-transform: none;
+            }
+
+            .custom_404_home_btn {
+                width: 100%;
+                padding: var(--spacing-xl) var(--spacing-3lg);
+                border-radius: var(--radius-lg);
+                background: var(--colors-primary);
+                color: var(--colors-primary-text);
+                font-size: var(--font-size-text-lg);
+                font-style: normal;
+                font-weight: 600;
+                line-height: var(--line-height-text-lg);
+                text-transform: none;
+                border: unset;
+            }
+        }
+    }
+}

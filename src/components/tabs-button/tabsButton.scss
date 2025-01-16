@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.scrollable_tabs_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid var(--colors-border-secondary);
+}
+
+.tabs_wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: min(100%, 1248px);
+    margin-left: auto;
+    margin-right: auto;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+.tab {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: border-bottom .4s ease;
+    border-bottom: 2px solid transparent;
+
+    p {
+        font-size: var(--font-size-text-md);
+        font-weight: 500;
+    }
+}
+
+.scroll_left_btn,
+.scroll_right_btn {
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    float: right;
+    background: transparent;
+    position: absolute;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.scroll_left_btn {
+    left: 0;
+    padding: 12px 12px 12px 0;
+}
+
+.scroll_right_btn {
+    right: 0;
+    padding: 12px 0 12px 12px;
+}
